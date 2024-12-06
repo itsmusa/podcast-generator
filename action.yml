@@ -1,0 +1,18 @@
+name: "Podcast Generator"
+author: "Musa Magwaza"
+description: "Generates a feed for a podcast from a YAML file"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icons: "git-branch"
+  color: "red"
+inputs:
+  email:
+    description: The commiter's email address
+    required: True
+    default: ${{ github.actor }}@localhost
+  name:
+    description: The commiter's name
+    requeired: True
+    default: ${{ github.actor }}
